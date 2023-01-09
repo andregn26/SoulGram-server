@@ -53,7 +53,7 @@ app.use("/users", userRoutes)
 app.use("/posts", postRoutes)
 
 //! MONGOOSE SETUP */
-process.env.PORT || 3000
+const PORT = process.env.PORT || 3000
 mongoose
   .set("strictQuery", true)
   .connect(process.env.MONGO_URL, {
